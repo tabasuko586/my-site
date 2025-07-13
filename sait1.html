@@ -1,181 +1,182 @@
-<!DOCTYPE html><html><head></head><body><doctype html="">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025年の占いトレンドの概要</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
 
+    body {
+      width: 1280px;
+      min-height: 721px;
+      font-family: 'Noto Sans JP', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>2025年の占いトレンドの概要</title>
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
-        
-        body {width: 1280px; min-height: 721px; font-family: 'Noto Sans JP', sans-serif;
-            margin: 0;
-            padding: 0;}
-        
-        .star {
-            position: absolute;
-            background-color: white;
-            width: 2px;
-            height: 2px;
-            border-radius: 50%;
-            animation: twinkle 3s infinite;
-            opacity: 0;
-        }
-        
-        @keyframes twinkle {
-            0% { opacity: 0; }
-            50% { opacity: 1; }
-            100% { opacity: 0; }
-        }
-        
-        .trend-card {
-            transition: all 0.3s ease;
-        }
-        
-        .trend-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-        }
-        
-        .highlight-text {
-            background: linear-gradient(to right, #fcd34d, #f59e0b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
+    .star {
+      position: absolute;
+      background-color: white;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      animation: twinkle 3s infinite;
+      opacity: 0;
+    }
 
+    @keyframes twinkle {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
 
-<div class="relative w-[1280px] h-[721px] bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900">
-<!-- Stars background -->
-<div class="absolute inset-0" id="stars"></div>
-<!-- Decorative elements -->
-<div class="absolute top-20 right-20 text-yellow-200 opacity-30">
-<i class="fa-solid fa-sun text-6xl"></i>
-</div>
-<div class="absolute bottom-20 left-20 text-blue-200 opacity-20">
-<i class="fa-solid fa-moon text-5xl"></i>
-</div>
-<!-- Main content -->
-<div class="relative z-10 h-full p-12 flex flex-col">
-<!-- Title -->
-<div class="mb-8">
-<h1 class="text-5xl font-bold text-white">
-                    2025年の<span class="highlight-text">占いトレンド</span>の概要
-                </h1>
-<div class="w-32 h-1 bg-yellow-400 mt-4"></div>
-</div>
-<!-- Main content area -->
-<div class="flex flex-1">
-<!-- Left column - Main description -->
-<div class="w-1/2 pr-8">
-<div class="bg-black bg-opacity-30 rounded-lg p-6 border border-purple-300 border-opacity-30">
-<h2 class="text-3xl font-semibold text-yellow-300 mb-4">
-<i class="fas fa-star-and-crescent mr-2"></i>キーワード
-                        </h2>
-<p class="text-2xl text-white mb-6">
-                            2025年は <span class="font-bold text-yellow-200">「変化」と「個の力」</span> が大きなキーワードとして浮上しています。
-                        </p>
-<ul class="text-xl text-gray-200 space-y-4">
-<li class="flex items-start">
-<i class="fas fa-circle-check text-yellow-400 mt-1 mr-3"></i>
-<span>個人の運勢をより深く、多角的に読み解くアプローチが主流に</span>
-</li>
-<li class="flex items-start">
-<i class="fas fa-circle-check text-yellow-400 mt-1 mr-3"></i>
-<span>著名な占い師たちは独自の占術で2025年の運勢を発表</span>
-<em data-skywork="text_badge" data-sk-source-text="著名な占い師たちは独自の占術で2025年の運勢を発表" id="skTag-5CH14X" class="sk-source-tag" data-sk-source-id="5CH14X"></em></li>
-<li class="flex items-start">
-<i class="fas fa-circle-check text-yellow-400 mt-1 mr-3"></i>
-<span>社会も個人も予測通りには進まない変化の多い時期と予測</span>
-</li>
-</ul>
-</div>
-</div>
-<!-- Right column - Trend cards -->
-<div class="w-1/2 pl-4 flex flex-col space-y-4">
-<h2 class="text-2xl font-semibold text-white mb-2">
-<i class="fas fa-chart-line mr-2"></i>注目されている占い
-                    </h2>
-<!-- Zodiac divination card -->
-<div class="trend-card bg-black bg-opacity-20 rounded-lg p-4 border-l-4 border-blue-400">
-<div class="flex items-center">
-<div class="text-blue-300 text-4xl mr-4">
-<i class="fas fa-star"></i>
-</div>
-<div>
-<h3 class="text-xl font-semibold text-blue-300">星座占い</h3>
-<p class="text-gray-300">木星が蟹座に入り、世の中のムードが内面的なテーマへシフト</p>
-</div>
-</div>
-</div>
-<!-- Blood type divination card -->
-<div class="trend-card bg-black bg-opacity-20 rounded-lg p-4 border-l-4 border-red-400">
-<div class="flex items-center">
-<div class="text-red-300 text-4xl mr-4">
-<i class="fas fa-droplet"></i>
-</div>
-<div>
-<h3 class="text-xl font-semibold text-red-300">血液型占い</h3>
-<p class="text-gray-300">占術と組み合わせてパーソナライズされた鑑定を提供</p>
-</div>
-</div>
-</div>
-<!-- Tarot divination card -->
-<div class="trend-card bg-black bg-opacity-20 rounded-lg p-4 border-l-4 border-green-400">
-<div class="flex items-center">
-<div class="text-green-300 text-4xl mr-4">
-<i class="fas fa-cards"></i>
-</div>
-<div>
-<h3 class="text-xl font-semibold text-green-300">タロット占い</h3>
-<p class="text-gray-300">「変化」「内省」「人間関係の見直し」を反映した解釈がトレンド</p>
-</div>
-</div>
-</div>
-<!-- Future outlook -->
-<div class="trend-card bg-black bg-opacity-20 rounded-lg p-4 border-l-4 border-purple-400">
-<div class="flex items-center">
-<div class="text-purple-300 text-4xl mr-4">
-<i class="fas fa-crystal-ball"></i>
-</div>
-<div>
-<h3 class="text-xl font-semibold text-purple-300">今後の展望</h3>
-<p class="text-gray-300">ハイブリッドなアプローチと内面への対応が重要に</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Page number -->
-<div class="absolute bottom-4 right-4 text-gray-400">
-                2 / 15
+    .trend-card {
+      transition: all 0.3s ease;
+    }
+
+    .trend-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+
+    .highlight-text {
+      background: linear-gradient(to right, #fcd34d, #f59e0b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body>
+  <div class="relative w-[1280px] h-[721px] bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900">
+    <div class="absolute inset-0" id="stars"></div>
+
+    <div class="absolute top-20 right-20 text-yellow-200 opacity-30">
+      <i class="fa-solid fa-sun text-6xl"></i>
+    </div>
+    <div class="absolute bottom-20 left-20 text-blue-200 opacity-20">
+      <i class="fa-solid fa-moon text-5xl"></i>
+    </div>
+
+    <div class="relative z-10 h-full p-12 flex flex-col">
+      <div class="mb-8">
+        <h1 class="text-5xl font-bold text-white">
+          2025年の<span class="highlight-text">占いトレンド</span>の概要
+        </h1>
+        <div class="w-32 h-1 bg-yellow-400 mt-4"></div>
+      </div>
+
+      <div class="flex flex-1">
+        <div class="w-1/2 pr-8">
+          <div class="bg-black bg-opacity-30 rounded-lg p-6 border border-purple-300 border-opacity-30">
+            <h2 class="text-3xl font-semibold text-yellow-300 mb-4">
+              <i class="fas fa-star-and-crescent mr-2"></i>キーワード
+            </h2>
+            <p class="text-2xl text-white mb-6">
+              2025年は <span class="font-bold text-yellow-200">「変化」と「個の力」</span> が大きなキーワードとして浮上しています。
+            </p>
+            <ul class="text-xl text-gray-200 space-y-4">
+              <li class="flex items-start">
+                <i class="fas fa-circle-check text-yellow-400 mt-1 mr-3"></i>
+                <span>個人の運勢をより深く、多角的に読み解くアプローチが主流に</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-circle-check text-yellow-400 mt-1 mr-3"></i>
+                <span>著名な占い師たちは独自の占術で2025年の運勢を発表</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-circle-check text-yellow-400 mt-1 mr-3"></i>
+                <span>社会も個人も予測通りには進まない変化の多い時期と予測</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="w-1/2 pl-4 flex flex-col space-y-4">
+          <h2 class="text-2xl font-semibold text-white mb-2">
+            <i class="fas fa-chart-line mr-2"></i>注目されている占い
+          </h2>
+
+          <div class="trend-card bg-black bg-opacity-20 rounded-lg p-4 border-l-4 border-blue-400">
+            <div class="flex items-center">
+              <div class="text-blue-300 text-4xl mr-4">
+                <i class="fas fa-star"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-blue-300">星座占い</h3>
+                <p class="text-gray-300">木星が蟹座に入り、世の中のムードが内面的なテーマへシフト</p>
+              </div>
             </div>
-</div>
-</div>
-<script>
-        // Create stars dynamically
-        const starsContainer = document.getElementById('stars');
-        const numberOfStars = 100;
-        
-        for (let i = 0; i < numberOfStars; i++) {
-            const star = document.createElement('div');
-            star.classList.add('star');
-            
-            // Random position
-            star.style.left = `${Math.random() * 1280}px`;
-            star.style.top = `${Math.random() * 720}px`;
-            
-            // Random size
-            const size = Math.random() * 2 + 1;
-            star.style.width = `${size}px`;
-            star.style.height = `${size}px`;
-            
-            // Random twinkle delay
-            star.style.animationDelay = `${Math.random() * 5}s`;
-            
-            starsContainer.appendChild(star);
-        }
-    </script>
+          </div>
 
-</doctype></body></html>
+          <div class="trend-card bg-black bg-opacity-20 rounded-lg p-4 border-l-4 border-red-400">
+            <div class="flex items-center">
+              <div class="text-red-300 text-4xl mr-4">
+                <i class="fas fa-droplet"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-red-300">血液型占い</h3>
+                <p class="text-gray-300">占術と組み合わせてパーソナライズされた鑑定を提供</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="trend-card bg-black bg-opacity-20 rounded-lg p-4 border-l-4 border-green-400">
+            <div class="flex items-center">
+              <div class="text-green-300 text-4xl mr-4">
+                <i class="fas fa-cards"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-green-300">タロット占い</h3>
+                <p class="text-gray-300">「変化」「内省」「人間関係の見直し」を反映した解釈がトレンド</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="trend-card bg-black bg-opacity-20 rounded-lg p-4 border-l-4 border-purple-400">
+            <div class="flex items-center">
+              <div class="text-purple-300 text-4xl mr-4">
+                <i class="fas fa-crystal-ball"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-purple-300">今後の展望</h3>
+                <p class="text-gray-300">ハイブリッドなアプローチと内面への対応が重要に</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ページ番号 -->
+      <div class="absolute bottom-4 right-4 text-gray-400">
+        2 / 15
+      </div>
+
+      <!-- ナビゲーションリンク -->
+      <div class="absolute bottom-4 left-4 text-white space-x-4">
+        <a href="index.html" class="underline">← 前のページ</a>
+        <a href="trend3.html" class="underline">次のページ →</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const starsContainer = document.getElementById('stars');
+    const numberOfStars = 100;
+    for (let i = 0; i < numberOfStars; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.left = `${Math.random() * 1280}px`;
+      star.style.top = `${Math.random() * 720}px`;
+      const size = Math.random() * 2 + 1;
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+      star.style.animationDelay = `${Math.random() * 5}s`;
+      starsContainer.appendChild(star);
+    }
+  </script>
+</body>
+</html>
+
