@@ -1,0 +1,204 @@
+<!DOCTYPE html><html><head></head><body><doctype html="">
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>2025年の仕事運と金運</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+        
+        body {width: 1280px; min-height: 834px; font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;}
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+            opacity: 0;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+        .fortune-card {
+            transition: all 0.3s ease;
+        }
+        
+        .fortune-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .highlight-text {
+            background: linear-gradient(to right, #fcd34d, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .career-good {
+            border-left: 4px solid #10B981;
+        }
+        
+        .career-challenge {
+            border-left: 4px solid #F59E0B;
+        }
+        
+        .finance-growth {
+            border-left: 4px solid #3B82F6;
+        }
+        
+        .finance-investment {
+            border-left: 4px solid #8B5CF6;
+        }
+    </style>
+
+
+<div class="relative w-[1280px] h-[834px] bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900">
+<!-- Stars background -->
+<div class="absolute inset-0" id="stars"></div>
+<!-- Decorative elements -->
+<div class="absolute top-20 right-20 text-yellow-200 opacity-20">
+<i class="fa-solid fa-coins text-6xl"></i>
+</div>
+<div class="absolute bottom-20 left-20 text-blue-200 opacity-20">
+<i class="fa-solid fa-briefcase text-5xl"></i>
+</div>
+<!-- Main content -->
+<div class="relative z-10 h-full p-12 flex flex-col">
+<!-- Title -->
+<div class="mb-8">
+<h1 class="text-5xl font-bold text-white">
+                    2025年の<span class="highlight-text">仕事運と金運</span>
+</h1>
+<div class="w-32 h-1 bg-yellow-400 mt-4"></div>
+</div>
+<!-- Main content area -->
+<div class="flex flex-1 space-x-6">
+<!-- Left column - Career fortune -->
+<div class="w-1/2">
+<div class="bg-black bg-opacity-30 rounded-lg p-6 border border-purple-300 border-opacity-30 h-full">
+<div class="flex items-center mb-4">
+<div class="text-green-400 text-3xl mr-3">
+<i class="fas fa-briefcase"></i>
+</div>
+<h2 class="text-3xl font-semibold text-green-300">仕事運</h2>
+</div>
+<div class="space-y-4">
+<div class="fortune-card career-good bg-black bg-opacity-20 rounded p-4">
+<h3 class="text-xl font-semibold text-white mb-2">
+<i class="fas fa-thumbs-up text-green-400 mr-2"></i>努力が評価される方
+                                </h3>
+<p class="text-gray-300">
+                                    仕事運が好調なタイプ（金のインディアン座、銀のインディアン座など）は、これまでの努力が実を結び、昇進や昇給、憧れの仕事に就くなどのチャンスがあります。
+                                </p>
+</div>
+<div class="fortune-card career-challenge bg-black bg-opacity-20 rounded p-4">
+<h3 class="text-xl font-semibold text-white mb-2">
+<i class="fas fa-exclamation-triangle text-yellow-400 mr-2"></i>変化への対応が必要
+                                </h3>
+<p class="text-gray-300">
+                                    注意が必要なタイプ（金の羅針盤座、金の鳳凰座など）は、調子に乗りすぎての失敗や、不慣れな仕事を任されるなどの試練が訪れる可能性があります。事前準備と確認を徹底し、謙虚な姿勢を忘れないことが大切です。
+                                </p>
+</div>
+<div class="fortune-card bg-black bg-opacity-20 rounded p-4">
+<h3 class="text-xl font-semibold text-white mb-2">
+<i class="fas fa-sync-alt text-blue-400 mr-2"></i>変化と挑戦の年
+                                </h3>
+<p class="text-gray-300">
+                                    変化と挑戦の年（金のカメレオン座、銀のカメレオン座など）は、部署異動や新しい役割を任されるなど、環境の変化が起こりやすい年です。未経験のことにも積極的に挑戦することで、大きく成長できます。
+                                </p>
+</div>
+<div class="text-sm text-gray-400 italic mt-4">
+                                *木下レオンの占いによると、日干（生まれた日の十干）によっても運気の流れは異なります。
+                            </div>
+</div>
+</div>
+</div>
+<!-- Right column - Financial fortune -->
+<div class="w-1/2">
+<div class="bg-black bg-opacity-30 rounded-lg p-6 border border-purple-300 border-opacity-30 h-full">
+<div class="flex items-center mb-4">
+<div class="text-yellow-400 text-3xl mr-3">
+<i class="fas fa-coins"></i>
+</div>
+<h2 class="text-3xl font-semibold text-yellow-300">金運</h2>
+</div>
+<div class="space-y-4">
+<div class="fortune-card finance-growth bg-black bg-opacity-20 rounded p-4">
+<h3 class="text-xl font-semibold text-white mb-2">
+<i class="fas fa-chart-line text-blue-400 mr-2"></i>収入アップ
+                                </h3>
+<p class="text-gray-300">
+                                    仕事運が好調なタイプは、それに伴い収入も大きくアップする可能性があります。人生で最も高価な買い物（家や車など）を決断するにも良い時期とされています。
+                                </p>
+</div>
+<div class="fortune-card finance-investment bg-black bg-opacity-20 rounded p-4">
+<h3 class="text-xl font-semibold text-white mb-2">
+<i class="fas fa-hand-holding-usd text-purple-400 mr-2"></i>自己投資
+                                </h3>
+<p class="text-gray-300">
+                                    資格取得やスキルアップ、新しい体験など、将来の自分に繋がる投資は積極的に行うと良いでしょう。特に「チャレンジの年」にあたるタイプは、自己投資が後の金運アップに繋がります。
+                                </p>
+</div>
+<div class="fortune-card bg-black bg-opacity-20 rounded p-4">
+<h3 class="text-xl font-semibold text-white mb-2">
+<i class="fas fa-exclamation-circle text-red-400 mr-2"></i>注意点
+                                </h3>
+<p class="text-gray-300">
+                                    「乱気の年」にあたる金の鳳凰座などは、誘惑に負けて散財したり、儲け話に騙されたりする危険性があるため注意が必要です。
+                                </p>
+</div>
+<div class="bg-black bg-opacity-20 rounded p-4">
+<h3 class="text-xl font-semibold text-white mb-2">
+<i class="fas fa-palette text-green-400 mr-2"></i>ラッキーカラー
+                                </h3>
+<p class="text-gray-300">
+                                    占い師によって見解は異なりますが、「黄色」（金運アップ）、「緑色」と「赤色」（2025年の干支に由来）などが挙げられています。
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Page number -->
+<div class="absolute bottom-4 right-4 text-gray-400">
+                8 / 15
+            </div>
+</div>
+</div>
+<script>
+        // Create stars dynamically
+        const starsContainer = document.getElementById('stars');
+        const numberOfStars = 100;
+        
+        for (let i = 0; i < numberOfStars; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            
+            // Random position
+            star.style.left = `${Math.random() * 1280}px`;
+            star.style.top = `${Math.random() * 720}px`;
+            
+            // Random size
+            const size = Math.random() * 2 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            
+            // Random twinkle delay
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            
+            starsContainer.appendChild(star);
+        }
+    </script>
+
+</doctype></body></html>
