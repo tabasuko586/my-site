@@ -1,0 +1,246 @@
+<!DOCTYPE html><html><head></head><body><doctype html="">
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>星座占いの最新情報</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+        
+        body {width: 1280px; min-height: 799px; font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;}
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+            opacity: 0;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+        .highlight-text {
+            background: linear-gradient(to right, #fcd34d, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .planet {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #f59e0b;
+            box-shadow: 0 0 10px #f59e0b;
+            animation: movePlanet 10s linear infinite;
+        }
+        
+        @keyframes movePlanet {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(120px, 0); }
+            100% { transform: translate(0, 0); }
+        }
+        
+        .zodiac-sign {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(219, 234, 254, 0.3);
+            font-size: 24px;
+            color: white;
+            margin: 0 10px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .zodiac-path {
+            height: 4px;
+            background: linear-gradient(90deg, #4f46e5, #f59e0b);
+            flex-grow: 1;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+
+
+<div class="relative w-[1280px] h-[799px] bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900">
+<!-- Stars background -->
+<div class="absolute inset-0" id="stars"></div>
+<!-- Decorative elements -->
+<div class="absolute top-40 right-40 text-yellow-200 opacity-20">
+<i class="fa-solid fa-star text-6xl"></i>
+</div>
+<div class="absolute bottom-40 left-40 text-blue-200 opacity-20">
+<i class="fa-solid fa-moon text-5xl"></i>
+</div>
+<!-- Main content -->
+<div class="relative z-10 h-full p-12 flex flex-col">
+<!-- Title -->
+<div class="mb-8">
+<h1 class="text-5xl font-bold text-white">
+<i class="fas fa-star-and-crescent text-yellow-300 mr-3"></i>星座占いの<span class="highlight-text">最新情報</span>
+</h1>
+<div class="w-32 h-1 bg-yellow-400 mt-4"></div>
+</div>
+<!-- Main content area -->
+<div class="flex flex-1">
+<!-- Left column - Key points -->
+<div class="w-1/2 pr-8">
+<div class="bg-black bg-opacity-30 rounded-lg p-6 border border-purple-300 border-opacity-30 mb-6">
+<h2 class="text-3xl font-semibold text-yellow-300 mb-4">
+<i class="fas fa-meteor mr-2"></i>2025年星座占いの特徴
+                        </h2>
+<ul class="text-xl text-gray-200 space-y-5">
+<li class="flex items-start">
+<i class="fas fa-circle-check text-yellow-400 mt-1 mr-3"></i>
+<span>大きな天体の動きがもたらす<span class="font-bold text-yellow-200">「運命の変動期」</span>として特徴づけ</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-circle-check text-yellow-400 mt-1 mr-3"></i>
+<span>世の中のムードは<span class="font-bold text-yellow-200">「ホーム」や「家族、親しい人とのつながり」</span>へのシフト</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-circle-check text-yellow-400 mt-1 mr-3"></i>
+<span>2025年下半期は、社会も個人も予測通りには進まない<span class="font-bold text-yellow-200">変化の多い時期</span></span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-circle-check text-yellow-400 mt-1 mr-3"></i>
+<span>柔軟な<span class="font-bold text-yellow-200">「受け身」の姿勢</span>が幸運を掴む鍵</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-circle-check text-yellow-400 mt-1 mr-3"></i>
+<span>迷った際には<span class="font-bold text-yellow-200">自身のルーツや初心</span>に立ち返ることが、進むべき道を見出すヒント</span>
+</li>
+</ul>
+</div>
+<!-- Jupiter movement visualization -->
+<div class="bg-black bg-opacity-30 rounded-lg p-6 border border-purple-300 border-opacity-30">
+<h3 class="text-2xl font-semibold text-blue-300 mb-3">
+<i class="fas fa-glow mr-2"></i>木星の移動
+                        </h3>
+<div class="flex items-center justify-center h-24 relative">
+<!-- Zodiac signs -->
+<div class="zodiac-sign">
+<span>♊</span>
+<div class="absolute -bottom-8 text-sm text-gray-300">双子座</div>
+</div>
+<div class="zodiac-path"></div>
+<div class="zodiac-sign">
+<span>♋</span>
+<div class="absolute -bottom-8 text-sm text-gray-300">蟹座</div>
+</div>
+<!-- Jupiter planet -->
+<div class="planet absolute" style="top: 50%; left: 30%; transform: translate(-50%, -50%);">
+<div class="absolute inset-0 rounded-full animate-pulse" style="background-color: rgba(245, 158, 11, 0.5);"></div>
+</div>
+<!-- Date label -->
+<div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-yellow-300 font-bold">
+                                6月10日以降
+                            </div>
+</div>
+</div>
+</div>
+<!-- Right column - Jupiter's influence -->
+<div class="w-1/2 pl-4">
+<div class="bg-black bg-opacity-30 rounded-lg p-6 border border-purple-300 border-opacity-30 h-full">
+<h2 class="text-3xl font-semibold text-yellow-300 mb-4">
+<i class="fas fa-glow mr-2"></i>木星の影響
+                        </h2>
+<div class="mb-6">
+<h3 class="text-2xl font-semibold text-blue-300 mb-3 flex items-center">
+<i class="fas fa-star mr-2"></i>木星の特徴
+                            </h3>
+<ul class="text-lg text-gray-200 space-y-2 pl-6">
+<li class="flex items-start">
+<i class="fas fa-chevron-right text-yellow-400 mt-1 mr-2"></i>
+<span>幸運の星として知られています</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-chevron-right text-yellow-400 mt-1 mr-2"></i>
+<span>成長と発展を象徴</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-chevron-right text-yellow-400 mt-1 mr-2"></i>
+<span>人間関係や運気を左右します</span>
+</li>
+</ul>
+</div>
+<div class="mb-6">
+<h3 class="text-2xl font-semibold text-blue-300 mb-3 flex items-center">
+<i class="fas fa-exchange-alt mr-2"></i>蟹座への移動の意味
+                            </h3>
+<ul class="text-lg text-gray-200 space-y-2 pl-6">
+<li class="flex items-start">
+<i class="fas fa-chevron-right text-yellow-400 mt-1 mr-2"></i>
+<span>内面的なテーマへのシフト</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-chevron-right text-yellow-400 mt-1 mr-2"></i>
+<span>家族や身近な人とのつながりの強調</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-chevron-right text-yellow-400 mt-1 mr-2"></i>
+<span>安全感と安定感の需要が高まる</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="text-2xl font-semibold text-blue-300 mb-3 flex items-center">
+<i class="fas fa-lightbulb mr-2"></i>占いのポイント
+                            </h3>
+<div class="bg-indigo-900 bg-opacity-50 p-4 rounded-lg border-l-4 border-yellow-400">
+<p class="text-lg text-gray-200">
+                                    木星が蟹座に入り、世の中のムードが内面的なテーマへシフト。この変動期を生き抜くためには、<span class="text-yellow-300 font-bold">自分自身のルーツや初心</span>に立ち返ることが重要です。
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Page number -->
+<div class="absolute bottom-4 right-4 text-gray-400">
+                3 / 15
+            </div>
+</div>
+</div>
+<script>
+        // Create stars dynamically
+        const starsContainer = document.getElementById('stars');
+        const numberOfStars = 100;
+        
+        for (let i = 0; i < numberOfStars; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            
+            // Random position
+            star.style.left = `${Math.random() * 1280}px`;
+            star.style.top = `${Math.random() * 720}px`;
+            
+            // Random size
+            const size = Math.random() * 2 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            
+            // Random twinkle delay
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            
+            starsContainer.appendChild(star);
+        }
+    </script>
+
+</doctype></body></html>
