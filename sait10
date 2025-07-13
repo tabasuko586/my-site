@@ -1,0 +1,241 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>水晶玉子の運勢分析</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+        
+        body {width: 1280px; min-height: 720px; font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;}
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+            opacity: 0;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+        .highlight-text {
+            background: linear-gradient(to right, #fcd34d, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .lucky-color-box {
+            transition: all 0.3s ease;
+        }
+        
+        .lucky-color-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .fortune-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        .fortune-card:hover {
+            transform: translateX(5px);
+        }
+        
+        .green-accent {
+            border-color: #10B981;
+        }
+        
+        .red-accent {
+            border-color: #EF4444;
+        }
+        
+        .flower-petal {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50% 0 50% 0;
+            transform: rotate(45deg);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: rotate(45deg) translate(0, 0); }
+            50% { transform: rotate(48deg) translate(5px, -5px); }
+            100% { transform: rotate(45deg) translate(0, 0); }
+        }
+    </style>
+</head>
+<body>
+<div class="relative w-[1280px] h-[720px] bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900">
+<!-- Stars background -->
+<div class="absolute inset-0" id="stars"></div>
+<!-- Decorative elements -->
+<div class="absolute top-20 right-20 text-yellow-200 opacity-30">
+<i class="fa-solid fa-sun text-6xl"></i>
+</div>
+<div class="absolute bottom-20 left-20 text-blue-200 opacity-20">
+<i class="fa-solid fa-moon text-5xl"></i>
+</div>
+<!-- Flower petals decoration -->
+<div class="flower-petal w-32 h-32 top-40 left-20"></div>
+<div class="flower-petal w-24 h-24 top-60 left-40"></div>
+<div class="flower-petal w-16 h-16 top-80 left-60"></div>
+<div class="flower-petal w-20 h-20 top-30 right-40"></div>
+<div class="flower-petal w-28 h-28 top-60 right-30"></div>
+<!-- Main content -->
+<div class="relative z-10 h-full p-12 flex flex-col">
+<!-- Title -->
+<div class="mb-8">
+<h1 class="text-5xl font-bold text-white">
+                    水晶玉子の<span class="highlight-text">運勢分析</span>
+</h1>
+<div class="w-32 h-1 bg-yellow-400 mt-4"></div>
+</div>
+<!-- Main content area -->
+<div class="flex flex-1 space-x-6">
+<!-- Left column - Dry year explanation -->
+<div class="w-1/2">
+<div class="bg-black bg-opacity-30 rounded-lg p-6 border border-purple-300 border-opacity-30 mb-6">
+<h2 class="text-3xl font-semibold text-yellow-300 mb-4 flex items-center">
+<i class="fas fa-dragon mr-3"></i>乙巳（きのとみ）の意味
+                        </h2>
+<p class="text-xl text-white mb-4">
+                            2025年の干支「乙巳（きのとみ）」は、草花を表す「乙」と火の気を持つ「巳」の組み合わせから：
+                        </p>
+<div class="bg-purple-900 bg-opacity-40 p-4 rounded-lg border-l-4 border-yellow-400">
+<p class="text-2xl text-yellow-200 font-semibold">
+                                「変化が隅々まで行き渡る時」
+                            </p>
+</div>
+<p class="text-lg text-gray-200 mt-4">
+                            草原に火が広がるように変化が広まる年です。巳（蛇）の特徴である「変化」「粘り強さ」「再生」の運気が強まります。
+                        </p>
+</div>
+<!-- Key to good fortune -->
+<div class="bg-black bg-opacity-30 rounded-lg p-6 border border-purple-300 border-opacity-30">
+<h2 class="text-2xl font-semibold text-white mb-3 flex items-center">
+<i class="fas fa-key mr-2"></i>開運の鍵
+                        </h2>
+<div class="flex items-start mb-4">
+<div class="text-green-400 text-3xl mr-4 mt-1">
+<i class="fas fa-heart"></i>
+</div>
+<p class="text-xl text-white">
+<span class="text-yellow-200 font-bold">身近な人を大切にすること</span>が開運の鍵です。
+                            </p>
+</div>
+<ul class="text-lg text-gray-300 space-y-3 pl-4">
+<li class="flex items-start">
+<i class="fas fa-circle-check text-green-400 mt-1 mr-2"></i>
+<span>人との繋がりを意識し、そこから得られる情報を活用</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-circle-check text-green-400 mt-1 mr-2"></i>
+<span>変化の波にうまく乗るために、古い習慣を手放す</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Right column - Lucky colors and items -->
+<div class="w-1/2 flex flex-col">
+<!-- Lucky colors -->
+<div class="mb-6">
+<h2 class="text-2xl font-semibold text-white mb-4 flex items-center">
+<i class="fas fa-palette mr-2"></i>ラッキーカラー
+                        </h2>
+<div class="flex space-x-4">
+<div class="lucky-color-box bg-black bg-opacity-30 rounded-lg p-4 border border-green-300 border-opacity-30 flex-1">
+<div class="h-16 bg-green-500 bg-opacity-20 rounded-t-lg mb-2 flex justify-center items-center">
+<i class="fas fa-leaf text-green-400 text-3xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-green-400 text-center">緑色</h3>
+<p class="text-gray-300 text-center mt-2">草花を象徴し、新生と繁栄を表します</p>
+</div>
+<div class="lucky-color-box bg-black bg-opacity-30 rounded-lg p-4 border border-red-300 border-opacity-30 flex-1">
+<div class="h-16 bg-red-500 bg-opacity-20 rounded-t-lg mb-2 flex justify-center items-center">
+<i class="fas fa-fire text-red-400 text-3xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-red-400 text-center">赤色</h3>
+<p class="text-gray-300 text-center mt-2">火の気を持つ巳を象徴し、熱意と活力を表します</p>
+</div>
+</div>
+</div>
+<!-- Lucky items -->
+<div class="mb-6">
+<h2 class="text-2xl font-semibold text-white mb-3 flex items-center">
+<i class="fas fa-gift mr-2"></i>ラッキーグッズ
+                        </h2>
+<div class="bg-black bg-opacity-30 rounded-lg p-4 border border-purple-300 border-opacity-30">
+<ul class="text-lg text-gray-200 space-y-2">
+<li class="flex items-center">
+<i class="fas fa-seedling text-green-300 text-xl mr-3"></i>
+<span>ガーデニングで育てるような「草花」</span>
+</li>
+<li class="flex items-center">
+<i class="fas fa-mitten text-yellow-300 text-xl mr-3"></i>
+<span>スカーフやネックレスなどの「長いもの」</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Top fortune prediction -->
+<div>
+<h2 class="text-2xl font-semibold text-white mb-3 flex items-center">
+<i class="fas fa-crown mr-2"></i>最強運ランキング1位
+                        </h2>
+<div class="fortune-card green-accent bg-black bg-opacity-30 rounded-lg p-4 border border-green-300 border-opacity-30">
+<div class="flex items-center">
+<div class="text-yellow-300 text-4xl mr-4">
+<i class="fas fa-star"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-yellow-200">ふたご座 A型</h3>
+<p class="text-white mt-1">「大きな挑戦も必ず成功する。望んだ物はすべて手に入る」</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Page number -->
+<div class="absolute bottom-4 right-4 text-gray-400">
+                11 / 15
+            </div>
+</div>
+</div>
+<script>
+        // Create stars dynamically
+        const starsContainer = document.getElementById('stars');
+        const numberOfStars = 100;
+        
+        for (let i = 0; i < numberOfStars; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            
+            // Random position
+            star.style.left = `${Math.random() * 1280}px`;
+            star.style.top = `${Math.random() * 720}px`;
+            
+            // Random size
+            const size = Math.random() * 2 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            
+            // Random twinkle delay
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            
+            starsContainer.appendChild(star);
+        }
+    </script>
+
+</body></html>
