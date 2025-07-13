@@ -1,0 +1,275 @@
+<!DOCTYPE html><html><head></head><body><doctype html="">
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ゲッターズ飯田の五星三心占い</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+        
+        body {width: 1280px; min-height: 900px; font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;}
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+            opacity: 0;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+        .card {
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .highlight-text {
+            background: linear-gradient(to right, #fcd34d, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .snake-animation {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            opacity: 0.1;
+            z-index: 0;
+        }
+    </style>
+
+
+<div class="relative w-[1280px] h-[900px] bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900">
+<!-- Stars background -->
+<div class="absolute inset-0" id="stars"></div>
+<!-- Decorative elements -->
+<div class="absolute top-20 right-20 text-yellow-200 opacity-20">
+<i class="fa-solid fa-sun text-6xl"></i>
+</div>
+<div class="absolute bottom-20 left-20 text-blue-200 opacity-20">
+<i class="fa-solid fa-moon text-5xl"></i>
+</div>
+<!-- Snake decorative element -->
+<div class="snake-animation">
+<svg height="120" viewBox="0 0 1280 120" width="1280">
+<path d="M0,100 C100,30 200,80 300,50 C400,20 500,70 600,40 C700,10 800,60 900,30 C1000,0 1100,50 1200,20 L1280,100 L0,100 Z" fill="#FFFFFF"></path>
+</svg>
+</div>
+<!-- Main content -->
+<div class="relative z-10 h-full p-12 flex flex-col">
+<!-- Title -->
+<div class="mb-8">
+<h1 class="text-5xl font-bold text-white">
+                    ゲッターズ飯田の<span class="highlight-text">五星三心占い</span>
+</h1>
+<div class="w-32 h-1 bg-yellow-400 mt-4"></div>
+</div>
+<!-- Main content area -->
+<div class="flex flex-1 space-x-6">
+<!-- Left column - Overview -->
+<div class="w-1/2">
+<div class="bg-black bg-opacity-30 rounded-lg p-6 border border-purple-300 border-opacity-30 h-full">
+<h2 class="text-3xl font-semibold text-yellow-300 mb-4">
+<i class="fas fa-star-and-crescent mr-2"></i>2025年の予言
+                        </h2>
+<p class="text-xl text-white mb-6">
+                            2025年の干支は「巳年」で、これまで水面下で動いていた物事が「蛇口からあふれ出す」ように表面化する年になると予測。
+                        <em data-skywork="text_badge" data-sk-source-text="2025年の干支は「巳年」で、これまで水面下で動いていた物事が「蛇口からあふれ出す」ように表面化する年になると予測。" id="skTag-7922V4" class="sk-source-tag" data-sk-source-id="7922V4"></em></p>
+<div class="mb-6">
+<div class="flex items-center mb-2">
+<i class="fas fa-fire text-red-400 text-xl mr-3"></i>
+<h3 class="text-2xl font-semibold text-red-300">干支の特徴</h3>
+</div>
+<ul class="text-lg text-gray-200 ml-10 space-y-2">
+<li class="flex items-start">
+<i class="fas fa-circle-check text-yellow-400 mt-1 mr-2"></i>
+<span>個人の力が重視される年</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-circle-check text-yellow-400 mt-1 mr-2"></i>
+<span>既存のルールを覆す天才肌のリーダー登場</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-circle-check text-yellow-400 mt-1 mr-2"></i>
+<span>変化の波に乗ることが運気UP</span>
+</li>
+</ul>
+</div>
+<div>
+<div class="flex items-center mb-2">
+<i class="fas fa-compass text-blue-400 text-xl mr-3"></i>
+<h3 class="text-2xl font-semibold text-blue-300">運気の良いタイプ</h3>
+</div>
+<ul class="text-lg text-gray-200 ml-10 space-y-2">
+<li class="flex items-start">
+<i class="fas fa-circle-check text-yellow-400 mt-1 mr-2"></i>
+<span>「インディアン座」- 陽気でマイペース、妄想が得意</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-circle-check text-yellow-400 mt-1 mr-2"></i>
+<span>「羅針盤座」- 生真面目でネガティブなタイプ</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-circle-check text-yellow-400 mt-1 mr-2"></i>
+<span>この両極端なエネルギーがぶつかり合うのが2025年の特徴</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Right column - Lucky actions and visualization -->
+<div class="w-1/2 flex flex-col">
+<div class="bg-black bg-opacity-30 rounded-lg p-6 border border-purple-300 border-opacity-30 mb-4">
+<h2 class="text-3xl font-semibold text-yellow-300 mb-4">
+<i class="fas fa-magic mr-2"></i>開運の三か条
+                        </h2>
+<div class="flex flex-col space-y-4">
+<!-- Action 1 -->
+<div class="card bg-black bg-opacity-20 rounded-lg p-4 border-l-4 border-yellow-400">
+<div class="flex items-center">
+<div class="text-yellow-300 text-4xl mr-4">
+<i class="fas fa-rocket"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-yellow-300">新しいことに飛びつく</h3>
+<p class="text-gray-300">新しい技術やサービス、考え方を積極的に取り入れる</p>
+</div>
+</div>
+</div>
+<!-- Action 2 -->
+<div class="card bg-black bg-opacity-20 rounded-lg p-4 border-l-4 border-green-400">
+<div class="flex items-center">
+<div class="text-green-300 text-4xl mr-4">
+<i class="fas fa-laugh-beam"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-green-300">遊びに行く・笑いに行く</h3>
+<p class="text-gray-300">アミューズメントパークやお笑いライブなど楽しい場所に出かける</p>
+</div>
+</div>
+</div>
+<!-- Action 3 -->
+<div class="card bg-black bg-opacity-20 rounded-lg p-4 border-l-4 border-blue-400">
+<div class="flex items-center">
+<div class="text-blue-300 text-4xl mr-4">
+<i class="fas fa-map-marked-alt"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-blue-300">新しいスポットに行く</h3>
+<p class="text-gray-300">新しいエンターテイメントが生まれる場所、特に大阪万博を注目</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Visualization of the two types -->
+<div class="flex-1 bg-black bg-opacity-30 rounded-lg p-4 border border-purple-300 border-opacity-30">
+<div class="flex justify-around h-full">
+<!-- Indian Seat Type -->
+<div class="w-1/2 p-3">
+<div class="bg-gradient-to-b from-yellow-800 to-yellow-600 bg-opacity-70 rounded-lg p-4 h-full flex flex-col justify-between">
+<div class="text-center">
+<i class="fas fa-sun text-yellow-200 text-4xl mb-2"></i>
+<h3 class="text-xl font-bold text-white">インディアン座</h3>
+</div>
+<div class="space-y-2 text-sm text-white">
+<div class="flex items-center">
+<i class="fas fa-circle text-xs mr-2"></i>
+<span>陽気でマイペースなエネルギー</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-circle text-xs mr-2"></i>
+<span>妄想や空想が得意</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-circle text-xs mr-2"></i>
+<span>時代の最先端を.walk</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-circle text-xs mr-2"></i>
+<span>変化を前向きに捉える</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Compass Seat Type -->
+<div class="w-1/2 p-3">
+<div class="bg-gradient-to-b from-blue-800 to-blue-600 bg-opacity-70 rounded-lg p-4 h-full flex flex-col justify-between">
+<div class="text-center">
+<i class="fas fa-compass text-blue-200 text-4xl mb-2"></i>
+<h3 class="text-xl font-bold text-white">羅針盤座</h3>
+</div>
+<div class="space-y-2 text-sm text-white">
+<div class="flex items-center">
+<i class="fas fa-circle text-xs mr-2"></i>
+<span>生真面目なタイプ</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-circle text-xs mr-2"></i>
+<span>ネガティブな傾向</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-circle text-xs mr-2"></i>
+<span>安定と確実さを重視</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-circle text-xs mr-2"></i>
+<span>逆境を乗り越える力</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Page number -->
+<div class="absolute bottom-4 right-4 text-gray-400">
+                10 / 15
+            </div>
+</div>
+</div>
+<script>
+        // Create stars dynamically
+        const starsContainer = document.getElementById('stars');
+        const numberOfStars = 100;
+        
+        for (let i = 0; i < numberOfStars; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            
+            // Random position
+            star.style.left = `${Math.random() * 1280}px`;
+            star.style.top = `${Math.random() * 720}px`;
+            
+            // Random size
+            const size = Math.random() * 2 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            
+            // Random twinkle delay
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            
+            starsContainer.appendChild(star);
+        }
+    </script>
+
+</doctype></body></html>
