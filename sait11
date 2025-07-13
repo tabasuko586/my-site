@@ -1,0 +1,199 @@
+<!DOCTYPE html><html><head></head><body><doctype html="">
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>2025年の開運アドバイス</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+        
+        body {width: 1280px; min-height: 720px; font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;}
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+            opacity: 0;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+        .advice-card {
+            transition: all 0.3s ease;
+        }
+        
+        .advice-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .highlight-text {
+            background: linear-gradient(to right, #fcd34d, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .advice-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .advice-card:hover .advice-icon {
+            transform: scale(1.2);
+        }
+    </style>
+
+
+<div class="relative w-[1280px] h-[720px] bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900">
+<!-- Stars background -->
+<div class="absolute inset-0" id="stars"></div>
+<!-- Decorative elements -->
+<div class="absolute top-20 right-20 text-yellow-200 opacity-30">
+<i class="fa-solid fa-sun text-6xl"></i>
+</div>
+<div class="absolute bottom-20 left-20 text-blue-200 opacity-20">
+<i class="fa-solid fa-moon text-5xl"></i>
+</div>
+<!-- Main content -->
+<div class="relative z-10 h-full p-12 flex flex-col">
+<!-- Title -->
+<div class="mb-6">
+<h1 class="text-5xl font-bold text-white">
+                    2025年の<span class="highlight-text">開運アドバイス</span>
+</h1>
+<div class="w-32 h-1 bg-yellow-400 mt-4"></div>
+</div>
+<!-- Introduction -->
+<p class="text-xl text-gray-200 mb-6">
+                2025年の運気を高めるためには、以下のアドバイスを活用してください。
+            </p>
+<!-- Advice Categories -->
+<div class="flex flex-1 space-x-4">
+<!-- Lucky Items -->
+<div class="w-1/3 advice-card bg-black bg-opacity-30 rounded-lg p-6 border border-purple-300 border-opacity-30">
+<div class="flex items-center mb-4">
+<div class="advice-icon text-yellow-300 text-4xl mr-3">
+<i class="fas fa-gem"></i>
+</div>
+<h2 class="text-2xl font-semibold text-yellow-300">ラッキーアイテム</h2>
+</div>
+<ul class="text-gray-200 space-y-3">
+<li class="flex items-start">
+<i class="fas fa-palette text-yellow-400 mt-1 mr-2"></i>
+<span><span class="font-semibold">ラッキーカラー:</span> 緑色、赤色、黄色、ピンク、オレンジ</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-leaf text-green-400 mt-1 mr-2"></i>
+<span><span class="font-semibold">グッズ:</span> 植物、長いもの（スカーフ等）、陶器、蛇の置物</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-tshirt text-pink-400 mt-1 mr-2"></i>
+<span><span class="font-semibold">ファッション:</span> 華やかな服、セミロングの髪型</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-gem text-blue-400 mt-1 mr-2"></i>
+<span><span class="font-semibold">パワーストーン:</span> 星座に応じた天然石（例：かに座にはムーンストーン）</span>
+</li>
+</ul>
+</div>
+<!-- Power Spots -->
+<div class="w-1/3 advice-card bg-black bg-opacity-30 rounded-lg p-6 border border-purple-300 border-opacity-30">
+<div class="flex items-center mb-4">
+<div class="advice-icon text-blue-300 text-4xl mr-3">
+<i class="fas fa-map-marker-alt"></i>
+</div>
+<h2 class="text-2xl font-semibold text-blue-300">パワースポット</h2>
+</div>
+<ul class="text-gray-200 space-y-3">
+<li class="flex items-start">
+<i class="fas fa-torii-gate text-orange-400 mt-1 mr-2"></i>
+<span><span class="font-semibold">神社・仏閣:</span> 蛇の使いとされる弁財天を祀る神社（竹生島神社など）</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-compass text-green-400 mt-1 mr-2"></i>
+<span><span class="font-semibold">方角:</span> 南西が良い方角とされています</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-ticket text-yellow-400 mt-1 mr-2"></i>
+<span><span class="font-semibold">場所の種類:</span> アミューズメントパーク、寄席など「遊び」や「笑い」のあるスポット</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-cloud-sun text-blue-400 mt-1 mr-2"></i>
+<span><span class="font-semibold">天一天上:</span> 7月23日～8月7日、9月21日～10月6日、11月20日～12月5日</span>
+</li>
+</ul>
+</div>
+<!-- Habits -->
+<div class="w-1/3 advice-card bg-black bg-opacity-30 rounded-lg p-6 border border-purple-300 border-opacity-30">
+<div class="flex items-center mb-4">
+<div class="advice-icon text-purple-300 text-4xl mr-3">
+<i class="fas fa-brain"></i>
+</div>
+<h2 class="text-2xl font-semibold text-purple-300">開運習慣</h2>
+</div>
+<ul class="text-gray-200 space-y-3">
+<li class="flex items-start">
+<i class="fas fa-smile text-yellow-400 mt-1 mr-2"></i>
+<span><span class="font-semibold">ポジティブな思考:</span> 常に感謝の気持ちを持ち、前向きな言葉を使う</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-arrows-spin text-green-400 mt-1 mr-2"></i>
+<span><span class="font-semibold">変化を恐れない:</span> 古い習慣を手放し、新しい価値観や挑戦を柔軟に受け入れる</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-people-group text-blue-400 mt-1 mr-2"></i>
+<span><span class="font-semibold">人間関係を大切にする:</span> 身近な人との繋がりを大切にし、感謝の気持ちを伝える</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-broom text-orange-400 mt-1 mr-2"></i>
+<span><span class="font-semibold">整理整頓と断捨離:</span> 物理的な環境を整えることで心の整理にも繋がる</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-pen-to-square text-red-400 mt-1 mr-2"></i>
+<span><span class="font-semibold">日記やアファメーション:</span> 目標や感謝の気持ちを書き出す習慣</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Page number -->
+<div class="absolute bottom-4 right-4 text-gray-400">
+                12 / 15
+            </div>
+</div>
+</div>
+<script>
+        // Create stars dynamically
+        const starsContainer = document.getElementById('stars');
+        const numberOfStars = 100;
+        
+        for (let i = 0; i < numberOfStars; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            
+            // Random position
+            star.style.left = `${Math.random() * 1280}px`;
+            star.style.top = `${Math.random() * 720}px`;
+            
+            // Random size
+            const size = Math.random() * 2 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            
+            // Random twinkle delay
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            
+            starsContainer.appendChild(star);
+        }
+    </script>
+
+</doctype></body></html>
