@@ -1,0 +1,152 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>2025年 最新占いトレンド</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+        
+        body {width: 1280px; min-height: 720px; font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;}
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+            opacity: 0;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+        .constellation {
+            position: absolute;
+            opacity: 0.3;
+            transform: scale(0.8);
+            transition: all 0.5s ease;
+        }
+        
+        .constellation:hover {
+            opacity: 0.8;
+            transform: scale(1);
+        }
+        
+        .zodiac-circle {
+            animation: rotate 60s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .subtitle-animation {
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
+            animation-delay: 1s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+<div class="relative w-[1280px] h-[720px] bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900">
+<!-- Stars background -->
+<div class="absolute inset-0" id="stars"></div>
+<!-- Zodiac circle -->
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] zodiac-circle opacity-10">
+<div class="absolute inset-0 rounded-full border-4 border-gold"></div>
+<div class="absolute inset-0 rounded-full border border-white opacity-30"></div>
+</div>
+<!-- Constellations -->
+<div class="constellation top-20 left-40 text-yellow-200 text-2xl">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star ml-6 mt-8"></i>
+<i class="fa-solid fa-star ml-4 mt-2"></i>
+<i class="fa-solid fa-star ml-8 mt-6"></i>
+</div>
+<div class="constellation bottom-40 right-60 text-blue-200 text-2xl">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star ml-10 mt-4"></i>
+<i class="fa-solid fa-star ml-6 mt-10"></i>
+<i class="fa-solid fa-star ml-2 mt-6"></i>
+</div>
+<!-- Astrological symbols -->
+<div class="absolute top-20 right-40 text-yellow-200 text-4xl opacity-40">
+<i class="fa-solid fa-moon"></i>
+</div>
+<div class="absolute bottom-32 left-48 text-purple-200 text-5xl opacity-30">
+<i class="fa-solid fa-sun"></i>
+</div>
+<!-- Title content -->
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<div class="text-center z-10">
+<h1 class="text-7xl font-bold text-white mb-6 tracking-wider">
+                    2025年 <span class="text-yellow-300">最新占いトレンド</span>
+</h1>
+<p class="text-3xl text-gray-200 mb-8 subtitle-animation">
+                    未来を読み解く新時代の占術
+                </p>
+<div class="flex justify-center space-x-10 text-white text-2xl opacity-80 subtitle-animation mt-12">
+<div class="flex flex-col items-center">
+<i class="fa-solid fa-star-and-crescent text-4xl mb-2"></i>
+<span>星座占い</span>
+</div>
+<div class="flex flex-col items-center">
+<i class="fa-solid fa-droplet text-4xl mb-2"></i>
+<span>血液型占い</span>
+</div>
+<div class="flex flex-col items-center">
+<i class="fa-solid fa-cards text-4xl mb-2"></i>
+<span>タロット</span>
+</div>
+</div>
+<p class="text-gray-300 mt-20 subtitle-animation">
+                    報告日: 2025年7月14日
+                </p>
+</div>
+</div>
+<!-- Decorative elements -->
+<div class="absolute bottom-8 right-8 text-white opacity-50">
+<i class="fa-solid fa-crystal-ball text-2xl"></i>
+</div>
+</div>
+<script>
+        // Create stars dynamically
+        const starsContainer = document.getElementById('stars');
+        const numberOfStars = 100;
+        
+        for (let i = 0; i < numberOfStars; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            
+            // Random position
+            star.style.left = `${Math.random() * 1280}px`;
+            star.style.top = `${Math.random() * 720}px`;
+            
+            // Random size
+            const size = Math.random() * 2 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            
+            // Random twinkle delay
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            
+            starsContainer.appendChild(star);
+        }
+    </script>
+
+</body></html>
+      
+ページ 2
