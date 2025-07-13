@@ -1,0 +1,281 @@
+<!DOCTYPE html><html><head></head><body><doctype html="">
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>血液型×星座占いランキング</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+        
+        body {width: 1280px; min-height: 720px; font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;}
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+            opacity: 0;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+        .ranking-card {
+            transition: all 0.3s ease;
+        }
+        
+        .ranking-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .highlight-text {
+            background: linear-gradient(to right, #fcd34d, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .zodiac-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        
+        .blood-type-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            margin-right: 8px;
+            font-size: 14px;
+        }
+    </style>
+
+
+<div class="relative w-[1280px] h-[720px] bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900">
+<!-- Stars background -->
+<div class="absolute inset-0" id="stars"></div>
+<!-- Decorative elements -->
+<div class="absolute top-20 left-20 text-red-200 opacity-20">
+<i class="fa-solid fa-droplet text-6xl"></i>
+</div>
+<div class="absolute bottom-20 right-20 text-blue-200 opacity-20">
+<i class="fa-solid fa-star text-5xl"></i>
+</div>
+<!-- Main content -->
+<div class="relative z-10 h-full p-12 flex flex-col">
+<!-- Title -->
+<div class="mb-6">
+<h1 class="text-5xl font-bold text-white">
+                    血液型×星座<span class="highlight-text">占いランキング</span>
+</h1>
+<div class="w-32 h-1 bg-red-400 mt-4"></div>
+</div>
+<!-- Introduction -->
+<div class="mb-6">
+<p class="text-xl text-gray-200"><em data-skywork="text_badge" data-sk-source-text="水晶玉子監修の「星座×血液型」占いでは、2025年最強運ランキングが発表されました。" id="skTag-5CH14X" class="sk-source-tag" data-sk-source-id="5CH14X"></em>
+                    水晶玉子監修の「星座×血液型」占いでは、2025年最強運ランキングが発表されました。
+                    12星座と4つの血液型を掛け合わせて48通りの組み合わせを占います。
+                </p>
+</div>
+<!-- Rankings -->
+<div class="flex-1 grid grid-cols-3 gap-4">
+<!-- Top ranking -->
+<div class="ranking-card bg-gradient-to-b from-yellow-600 to-yellow-800 rounded-lg p-5 border-2 border-yellow-400">
+<div class="flex justify-between items-center mb-3">
+<div class="text-3xl font-bold text-white">1位</div>
+<div class="bg-yellow-400 text-yellow-900 text-lg font-bold py-1 px-3 rounded-full">
+<i class="fas fa-trophy mr-1"></i>最強運
+                        </div>
+</div>
+<div class="mb-3">
+<div class="flex items-center mb-1">
+<span class="zodiac-icon bg-blue-500 text-white">
+<i class="fas fa-gemini"></i>
+</span>
+<span class="text-xl font-semibold text-white">ふたご座</span>
+<span class="mx-2 text-gray-300">×</span>
+<span class="blood-type-icon bg-red-500 text-white">A</span>
+<span class="text-xl font-semibold text-white">型</span>
+</div>
+</div>
+<p class="text-white text-lg">
+                        「大きな挑戦も必ず成功する」
+                    </p>
+<p class="text-yellow-200 text-md mt-2">
+                        望んだ物はすべて手に入る
+                    </p>
+</div>
+<!-- 2nd ranking -->
+<div class="ranking-card bg-gradient-to-b from-gray-600 to-gray-800 rounded-lg p-5 border-2 border-gray-400">
+<div class="flex justify-between items-center mb-3">
+<div class="text-3xl font-bold text-white">2位</div>
+</div>
+<div class="mb-3">
+<div class="flex items-center mb-1">
+<span class="zodiac-icon bg-blue-500 text-white">
+<i class="fas fa-gemini"></i>
+</span>
+<span class="text-xl font-semibold text-white">ふたご座</span>
+<span class="mx-2 text-gray-300">×</span>
+<span class="blood-type-icon bg-red-500 text-white">AB</span>
+<span class="text-xl font-semibold text-white">型</span>
+</div>
+</div>
+<p class="text-white text-lg">
+                        「ずっと抱いていた夢が叶う」
+                    </p>
+<p class="text-gray-300 text-md mt-2">
+                        やりたいことはすべて実現できる
+                    </p>
+</div>
+<!-- 3rd ranking -->
+<div class="ranking-card bg-gradient-to-b from-gray-600 to-gray-800 rounded-lg p-5 border-2 border-gray-400">
+<div class="flex justify-between items-center mb-3">
+<div class="text-3xl font-bold text-white">3位</div>
+</div>
+<div class="mb-3">
+<div class="flex items-center mb-1">
+<span class="zodiac-icon bg-blue-500 text-white">
+<i class="fas fa-cancer"></i>
+</span>
+<span class="text-xl font-semibold text-white">かに座</span>
+<span class="mx-2 text-gray-300">×</span>
+<span class="blood-type-icon bg-red-500 text-white">A</span>
+<span class="text-xl font-semibold text-white">型</span>
+</div>
+</div>
+<p class="text-white text-lg">
+                        「人生 稀に見るチャンスが舞い込む」
+                    </p>
+<p class="text-gray-300 text-md mt-2">
+                        ワンランク上の人生がすぐそこに
+                    </p>
+</div>
+<!-- 4th ranking -->
+<div class="ranking-card bg-gradient-to-b from-gray-600 to-gray-800 rounded-lg p-5 border-2 border-gray-400">
+<div class="flex justify-between items-center mb-3">
+<div class="text-3xl font-bold text-white">4位</div>
+</div>
+<div class="mb-3">
+<div class="flex items-center mb-1">
+<span class="zodiac-icon bg-blue-500 text-white">
+<i class="fas fa-gemini"></i>
+</span>
+<span class="text-xl font-semibold text-white">ふたご座</span>
+<span class="mx-2 text-gray-300">×</span>
+<span class="blood-type-icon bg-red-500 text-white">O</span>
+<span class="text-xl font-semibold text-white">型</span>
+</div>
+</div>
+<p class="text-white text-lg">
+                        「仕事での努力が報われ収入ＵＰ」
+                    </p>
+<p class="text-gray-300 text-md mt-2">
+                        思い切った買い物も大成功
+                    </p>
+</div>
+<!-- 5th ranking -->
+<div class="ranking-card bg-gradient-to-b from-gray-600 to-gray-800 rounded-lg p-5 border-2 border-gray-400">
+<div class="flex justify-between items-center mb-3">
+<div class="text-3xl font-bold text-white">5位</div>
+</div>
+<div class="mb-3">
+<div class="flex items-center mb-1">
+<span class="zodiac-icon bg-blue-500 text-white">
+<i class="fas fa-cancer"></i>
+</span>
+<span class="text-xl font-semibold text-white">かに座</span>
+<span class="mx-2 text-gray-300">×</span>
+<span class="blood-type-icon bg-red-500 text-white">AB</span>
+<span class="text-xl font-semibold text-white">型</span>
+</div>
+</div>
+<p class="text-white text-lg">
+                        「かつてない行動力を発揮できる」
+                    </p>
+<p class="text-gray-300 text-md mt-2">
+                        長年 出会いたかった人にも会える
+                    </p>
+</div>
+<!-- 6th ranking -->
+<div class="ranking-card bg-gradient-to-b from-gray-600 to-gray-800 rounded-lg p-5 border-2 border-gray-400">
+<div class="flex justify-between items-center mb-3">
+<div class="text-3xl font-bold text-white">6位</div>
+</div>
+<div class="mb-3">
+<div class="flex items-center mb-1">
+<span class="zodiac-icon bg-blue-500 text-white">
+<i class="fas fa-scorpio"></i>
+</span>
+<span class="text-xl font-semibold text-white">さそり座</span>
+<span class="mx-2 text-gray-300">×</span>
+<span class="blood-type-icon bg-red-500 text-white">A</span>
+<span class="text-xl font-semibold text-white">型</span>
+</div>
+</div>
+<p class="text-white text-lg">
+                        「新しい才能が開花する」
+                    </p>
+<p class="text-gray-300 text-md mt-2">
+                        好きなことに打ち込んで吉
+                    </p>
+</div>
+</div>
+<!-- Additional info -->
+<div class="mt-6 bg-black bg-opacity-30 p-4 rounded-lg border border-purple-300 border-opacity-30">
+<div class="flex items-center">
+<i class="fas fa-info-circle text-yellow-300 text-xl mr-3"></i>
+<p class="text-gray-300">
+                        このランキングは、テレビ番組「ダウンタウンDX」で毎年恒例となっている水晶玉子氏監修の「星座×血液型」の運勢ランキングです。
+                    </p>
+</div>
+</div>
+<!-- Page number -->
+<div class="absolute bottom-4 right-4 text-gray-400">
+                4 / 15
+            </div>
+</div>
+</div>
+<script>
+        // Create stars dynamically
+        const starsContainer = document.getElementById('stars');
+        const numberOfStars = 100;
+        
+        for (let i = 0; i < numberOfStars; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            
+            // Random position
+            star.style.left = `${Math.random() * 1280}px`;
+            star.style.top = `${Math.random() * 720}px`;
+            
+            // Random size
+            const size = Math.random() * 2 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            
+            // Random twinkle delay
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            
+            starsContainer.appendChild(star);
+        }
+    </script>
+
+</doctype></body></html>
