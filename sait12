@@ -1,0 +1,264 @@
+<!DOCTYPE html><html><head></head><body><doctype html="">
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ラッキーアイテムとカラー</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+        
+        body {width: 1280px; min-height: 760px; font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;}
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+            opacity: 0;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+        .color-box {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .color-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .item-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .highlight-text {
+            background: linear-gradient(to right, #fcd34d, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+
+
+<div class="relative w-[1280px] h-[760px] bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900">
+<!-- Stars background -->
+<div class="absolute inset-0" id="stars"></div>
+<!-- Decorative elements -->
+<div class="absolute top-20 right-20 text-yellow-200 opacity-30">
+<i class="fa-solid fa-sun text-6xl"></i>
+</div>
+<div class="absolute bottom-20 left-20 text-blue-200 opacity-20">
+<i class="fa-solid fa-moon text-5xl"></i>
+</div>
+<!-- Main content -->
+<div class="relative z-10 h-full p-12 flex flex-col">
+<!-- Title -->
+<div class="mb-6">
+<h1 class="text-5xl font-bold text-white">
+                    ラッキーアイテムと<span class="highlight-text">カラー</span>
+</h1>
+<div class="w-32 h-1 bg-yellow-400 mt-4"></div>
+</div>
+<!-- Introduction -->
+<div class="mb-6">
+<p class="text-xl text-gray-200">
+                    2025年の干支「乙巳（きのとみ）」に関連するラッキーカラーとアイテムを取り入れて、運気を高めることができます。
+                </p>
+</div>
+<!-- Main content area -->
+<div class="flex flex-1 space-x-6">
+<!-- Left column - Lucky Colors -->
+<div class="w-1/2 bg-black bg-opacity-30 rounded-lg p-6 border border-purple-300 border-opacity-30">
+<h2 class="text-3xl font-semibold text-yellow-300 mb-4 flex items-center">
+<i class="fas fa-palette mr-3"></i>ラッキーカラー
+                    </h2>
+<div class="grid grid-cols-3 gap-4">
+<!-- Green -->
+<div class="color-box bg-green-800 bg-opacity-40 rounded-lg p-4 border border-green-500">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-green-500 mb-3 flex items-center justify-center">
+<i class="fas fa-leaf text-white text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-green-300">緑色</h3>
+<p class="text-gray-300 text-center mt-2">草花を象徴し、変化を助ける</p>
+</div>
+</div>
+<!-- Red -->
+<div class="color-box bg-red-800 bg-opacity-40 rounded-lg p-4 border border-red-500">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-red-500 mb-3 flex items-center justify-center">
+<i class="fas fa-fire text-white text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-red-300">赤色</h3>
+<p class="text-gray-300 text-center mt-2">巳（蛇）の火気を表します</p>
+</div>
+</div>
+<!-- Yellow -->
+<div class="color-box bg-yellow-800 bg-opacity-40 rounded-lg p-4 border border-yellow-500">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-yellow-500 mb-3 flex items-center justify-center">
+<i class="fas fa-coins text-white text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-yellow-300">黄色</h3>
+<p class="text-gray-300 text-center mt-2">金運を高めます</p>
+</div>
+</div>
+<!-- Pink -->
+<div class="color-box bg-pink-800 bg-opacity-40 rounded-lg p-4 border border-pink-500">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-pink-500 mb-3 flex items-center justify-center">
+<i class="fas fa-heart text-white text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-pink-300">ピンク色</h3>
+<p class="text-gray-300 text-center mt-2">恋愛運をサポート</p>
+</div>
+</div>
+<!-- Orange -->
+<div class="color-box bg-orange-800 bg-opacity-40 rounded-lg p-4 border border-orange-500">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-orange-500 mb-3 flex items-center justify-center">
+<i class="fas fa-bolt text-white text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-orange-300">オレンジ色</h3>
+<p class="text-gray-300 text-center mt-2">熱気と情熱を象徴</p>
+</div>
+</div>
+<!-- White -->
+<div class="color-box bg-white bg-opacity-40 rounded-lg p-4 border border-gray-300">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-white mb-3 flex items-center justify-center">
+<i class="fas fa-star text-gray-800 text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-white">ホワイト</h3>
+<p class="text-gray-300 text-center mt-2">清潔さと新たなスタート</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right column - Lucky Items -->
+<div class="w-1/2 bg-black bg-opacity-30 rounded-lg p-6 border border-purple-300 border-opacity-30">
+<h2 class="text-3xl font-semibold text-yellow-300 mb-4 flex items-center">
+<i class="fas fa-gift mr-3"></i>ラッキーグッズ
+                    </h2>
+<div class="grid grid-cols-2 gap-4">
+<!-- Plants -->
+<div class="item-card bg-green-900 bg-opacity-30 rounded-lg p-4 border border-green-400">
+<div class="flex items-start">
+<div class="text-green-400 text-4xl mr-4">
+<i class="fas fa-seedling"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-green-300">植物</h3>
+<p class="text-gray-300">乙が象徴する草花と関連します。室内に置いて育てる植物が吉。</p>
+</div>
+</div>
+</div>
+<!-- Long items -->
+<div class="item-card bg-purple-900 bg-opacity-30 rounded-lg p-4 border border-purple-400">
+<div class="flex items-start">
+<div class="text-purple-400 text-4xl mr-4">
+<i class="fas fa-scarf"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-purple-300">長いもの</h3>
+<p class="text-gray-300">スカーフやネックレスなどの長いアイテムが運気を伸ばします。</p>
+</div>
+</div>
+</div>
+<!-- Pottery -->
+<div class="item-card bg-blue-900 bg-opacity-30 rounded-lg p-4 border border-blue-400">
+<div class="flex items-start">
+<div class="text-blue-400 text-4xl mr-4">
+<i class="fas fa-vase"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-blue-300">陶器</h3>
+<p class="text-gray-300">土で作られた陶器は知恵を、特別な場所に置いておくと良い。</p>
+</div>
+</div>
+</div>
+<!-- Snake statue -->
+<div class="item-card bg-red-900 bg-opacity-30 rounded-lg p-4 border border-red-400">
+<div class="flex items-start">
+<div class="text-red-400 text-4xl mr-4">
+<i class="fas fa-snake"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-red-300">蛇の置物</h3>
+<p class="text-gray-300">巳（蛇）と関連し、再生や金運の象徴です。水面に置いておくと吉。</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Additional info -->
+<div class="mt-6 bg-black bg-opacity-40 rounded-lg p-4 border border-gray-500 border-opacity-30">
+<h3 class="text-lg font-semibold text-yellow-200 mb-2">
+<i class="fas fa-lightbulb mr-2"></i>使い方のポイント
+                        </h3>
+<ul class="text-gray-300 space-y-2">
+<li class="flex items-start">
+<i class="fas fa-circle-check text-yellow-400 mt-1 mr-2"></i>
+<span>アイテムを家に持ち込むと、その効果が発揮されます</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-circle-check text-yellow-400 mt-1 mr-2"></i>
+<span>色とアイテムを組み合わせて使用すると、効果が強くなります</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-circle-check text-yellow-400 mt-1 mr-2"></i>
+<span>月の満ち欠けの日に配置を変更すると良いでしょう</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Page number -->
+<div class="absolute bottom-4 right-4 text-gray-400">
+                13 / 15
+            </div>
+</div>
+</div>
+<script>
+        // Create stars dynamically
+        const starsContainer = document.getElementById('stars');
+        const numberOfStars = 100;
+        
+        for (let i = 0; i < numberOfStars; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            
+            // Random position
+            star.style.left = `${Math.random() * 1280}px`;
+            star.style.top = `${Math.random() * 720}px`;
+            
+            // Random size
+            const size = Math.random() * 2 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            
+            // Random twinkle delay
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            
+            starsContainer.appendChild(star);
+        }
+    </script>
+
+</doctype></body></html>
